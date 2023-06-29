@@ -1,0 +1,12 @@
+<div *ngIf="player">
+  <h2>Player Details</h2>
+  <p><strong>Name:</strong> {{ player.name }}</p>
+  <p><strong>Position:</strong> {{ player.position }}</p>
+  <p><strong>Team:</strong> {{ player.team }}</p>
+  <p><strong>Rushing Yards:</strong> {{ player.stats.rushingyards }}</p>
+  <p><strong>Touchdowns Thrown:</strong> {{ player.stats.touchdownsthrown }}</p>
+  <p><strong>Sacks:</strong> {{ player.stats.sacks }}</p>
+  <p><strong>Field Goals Made:</strong> {{ player.stats.fieldgoalsmade }}</p>
+  <p><strong>Field Goals Missed:</strong> {{ player.stats.fieldgoalsmissed }}</p>
+  <p><strong>Catches:</strong> {{ player.stats.catches }}</p>
+</div>

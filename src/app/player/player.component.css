@@ -1,0 +1,9 @@
+/* player.component.css */
+
+.add-player-heading {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: inline-block;
+}

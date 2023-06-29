@@ -1,0 +1,16 @@
+<form>
+  <h2>{{ player ? 'Update Player' : 'Add Player' }}</h2>
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="player.name" name="name" required>
+  </label>
+  <label>
+    Position:
+    <input type="text" [(ngModel)]="player.position" name="position" required>
+  </label>
+  <label>
+    Team:
+    <input type="text" [(ngModel)]="player.team" name="team" required>
+  </label>
+  <button type="button" (click)="onSave()">{{ player ? 'Update' : 'Add' }}</button>
+</form>

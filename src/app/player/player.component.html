@@ -1,0 +1,76 @@
+<div>
+  <h1>Player Operations</h1>
+
+  <!-- Form to add player -->
+  <form (ngSubmit)="addPlayer(newPlayer)">
+    <h2>Add Player</h2>
+    <label
+      >Name:
+      <input type="text" [(ngModel)]="newPlayer.name" name="name" required
+    /></label>
+    <label
+      >Position:
+      <input
+        type="text"
+        [(ngModel)]="newPlayer.position"
+        name="position"
+        required
+    /></label>
+    <label
+      >Team:
+      <input type="text" [(ngModel)]="newPlayer.team" name="team" required
+    /></label>
+    <button type="submit">Add</button>
+  </form>
+
+  <!-- Form to update player -->
+  <form (ngSubmit)="updatePlayer(playerToUpdate)">
+    <h2>Update Player</h2>
+    <label
+      >ID:
+      <input type="text" [(ngModel)]="playerToUpdate._id" name="id" required
+    /></label>
+    <label
+      >Name:
+      <input type="text" [(ngModel)]="playerToUpdate.name" name="name" required
+    /></label>
+    <label
+      >Position:
+      <input
+        type="text"
+        [(ngModel)]="playerToUpdate.position"
+        name="position"
+        required
+    /></label>
+    <label
+      >Team:
+      <input type="text" [(ngModel)]="playerToUpdate.team" name="team" required
+    /></label>
+    <button type="submit">Update</button>
+  </form>
+
+  <!-- Form to delete player -->
+  <form (ngSubmit)="deletePlayer(playerToDelete)">
+    <h2>Delete Player</h2>
+    <label
+      >ID: <input type="text" [(ngModel)]="playerToDelete" name="id" required
+    /></label>
+    <button type="submit">Delete</button>
+  </form>
+
+  <!-- Buttons to execute queries -->
+  <h2>Queries</h2>
+  <button (click)="mostTouchdownPasses()">
+    Player with Most Touchdown Passes
+  </button>
+  <button (click)="mostRushingYards()">Player with Most Rushing Yards</button>
+  <button (click)="leastRushingYards()">Player with Least Rushing Yards</button>
+  <button (click)="mostFieldGoals()">Players Sorted by Most Field Goals</button>
+  <button (click)="mostSacks()">Player with Most Sacks</button>
+
+  <!-- Display results -->
+  <div *ngIf="queryResults">
+    <h3>Query Results</h3>
+    <pre>{{ queryResults | json }}</pre>
+  </div>
+</div>
